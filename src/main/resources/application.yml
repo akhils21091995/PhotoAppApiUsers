@@ -32,7 +32,6 @@ spring:
     username: sa
     password: password
     driverClassName: org.h2.Driver  
-
-
+    
 
 
