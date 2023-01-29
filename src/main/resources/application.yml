@@ -1,0 +1,38 @@
+server:
+  port: ${PORT:0}
+
+gateway:
+  ip: 192.168.29.144
+
+eureka:
+  client:
+    serviceUrl:
+     defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+      
+spring:
+  application:
+    name: users-ws
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
+      settings:
+        web-allow-others: true
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver  
+
+
+
+
