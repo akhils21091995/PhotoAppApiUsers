@@ -31,7 +31,7 @@ public class WebSecurity {
 	}
 
 	@Bean
-	public SecurityFilterChain configure(HttpSecurity http) throws Exception {
+	protected SecurityFilterChain configure(HttpSecurity http) throws Exception {
 
 		// Configure AuthenticationManagerBuilder
 		AuthenticationManagerBuilder authenticationManagerBuilder = http
